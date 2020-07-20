@@ -1,0 +1,197 @@
+Cuando se trabaja en un proyecto siempre:
+hacer una nueva branch (git branch developer)
+cambiar a la nueva branch (gt checkout developer)
+empezar a trabajar
+cuando se estas conforme con el trabajo (git add -A)
+y luego (git commit -m "mensaje")
+finalmente (git checkout master)
+y (git merge developer)
+
+se copian todos los avances a la rama master
+
+
+Mas comandos git:
+git remote add <shortName> <url>   -para añadir un repo remoto y 						darle un nombre corto para 						referenciarlo. Solo lo referencia,
+					no hace nimgun cambio en el repo local
+
+
+origin  -Es el nombre que le pone git al repositorio que se ha
+         clonado, si nos vinculamos con otro repo remoto, le
+         podemos dar otro nombre diferente de origin
+
+
+git pull origin	<nombreBranch>	-Hace un fetch (actualiza los datos) y 
+			luego hace un merge (une) los cambios
+			con la rama local actual 
+
+
+
+git fetch origin <nombreBranch>	-Va a actualizar todos los datos nuevos 				desde el último cambio que se hizo, le
+		       		 ponemos el nombre origin para atualizar 
+				ese repo en particular. fetch solo descarga
+				los datos del repo remoto al repo local
+				no hace un merge
+
+git add -A      -se añaden todos los nuevo archivos 
+
+git commit -m "mensaje" -se hace el commit d los nuevos archivos al repo local
+
+git push origin master     -se suben los nuevos cambios al repo local
+
+
+
+
+
+
+
+Para hacer fetches y pushes con branches diferentes:
+
+git init-inicializo el repo
+
+git remote add origin <url> -me vinculo con el repo remoto y le pongo el nombre origin
+
+git fetch origin -actualiza todos los nuevos cambios en del repo remoto en el repo local (incluso las ramas del repo remoto, aunque no se muestren en el repo local)
+
+git pull origin master  -baja todos los cambios de la rama master
+
+git checkout <nombre de la branch en la que queremos trabajar>  -no va a aparecer en las branch, porq esta oculta, pero luego de darle a checkout va a aparecer
+
+Hacer todos los cambios necearios
+luego:
+git add -A
+git commit m "mensaje"
+
+git push origin <nombreBranch>  -para subir contenido solo a esa  rama
+
+git push origin master -por ejem para subir contenido a la rama master
+
+
+
+
+
+
+EN EL CASO DE QUE HAYA OTROS .git DENTRO DE OTRO .git EN GITHUB NO SE
+PODRÁ TENER ACCESO A LA CARPETA Y LA MOSTRARÁ CON UNA FLECHA BLANCA EN
+LA MISMA. ELIMINAR EL .git DE LAS CARPETAS ANIDADAS O COPIAR LOS ARCHIVOS 
+A OTRA CARPETA Y DEBERÍA SOLUCIONAR EL PROBLEMA.
+
+
+
+
+
+
+la rama developer siempre sigue los cambios en la rama master, pero master no sigue los cambios en la rama developer, es decir que es necesario realizar un merge para actualizar la rama master
+
+Cuando se quiera subir achivos por primera vez a un repo remoto, primero hacer un clone en una carpeta, y luego copiar o empezar a trabajar en los archivos correspondientes, de lo contrario va a haber un error si nos asociamos directamente sin hacer un clone, ya que el repo local no tiene actualizados los cambios del repo remoto. Tambien esto se puede hacer con fetch, pero no lo entiendo(tira error, investigar el tema)
+
+Comandos git:
+cd ----para ingresar a una carpeta o directorio
+
+cd..----salir de una carpeta
+
+git init -----para generar el .git en la carpeta
+ 
+git fetch origin	-para actualizar el repo a los ultimos 				cambios
+
+git status
+
+git add –A  ------para agregar todos los documentos
+
+git commit –m “comentario” ----------para guardar en el repositorio local
+
+TAB ----para autocompletar una vez escrita una parte de la palabra
+
+git remote add origin LINK---------para vincularse con un repositorio determinado en la nube
+
+git remote -v    -------para ver en que repositorio estoy parado
+
+git push –u origin master-----------para agregar algo al repositorio en la nube en la rama master
+
+git push –u origin BRANCH-------para agregar algo en otra rama
+
+git branch -------para mostrar las ramas existentes
+
+git branch “NOMBRE DE LA RAMA” ---------crea una nueva rama
+
+git checkout “NOMBRE DE LA RAMA” -----------para cambiar de rama
+
+clear-------limpia la pantalla
+
+pwd---muestra en que directorio nos encontramos
+
+git config --list   ----para ver la configuración
+
+///En el caso de que clonemos un repositorio y queramos acceder a los datos específicos de una
+branch, primero entrar en la carpeta que tenga el .git . Luego escribi "git branch -a" para ver 
+las ramas ocultas del repositorio. Luego escribir "git checkout nombreDeLaRama" y finalmente 
+"git branch" para corroborar que estamos en esa rama. 
+
+
+git pull origin nombreBranch  ---para hacer un pull a una branch especifica
+
+
+#------------------------------------------------------------
+#  Cloning Commands
+#------------------------------------------------------------
+
+Cloning from a Random github repo. There are many examples out there
+  git clone https://github.com/afosdick/ECEN5013.git
+
+Cloning from a local repo on your current machine
+  git clone /local/path/to/repo
+
+Cloning from another server using your SSH keys
+  git clone ssh://sever.url/path/to/repo
+  git clone ssh://username@sever.url/path/to/repo
+
+#------------------------------------------------------------
+#  Log Commands
+#------------------------------------------------------------
+
+Different methods of using git log
+  git log
+  git log --oneline --graph
+  git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
